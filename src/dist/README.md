@@ -12,14 +12,26 @@ Store the private key of from_address in .env variable
 
 Run this in the executable directory:
 
+```
+
 ./vault /path/to/socket/socket_python.s
+```
 
 Head over the socket directory and:
 
+```
+
 nc -U socket_python.s
+```
 
 ## Request Example
 
 Make sure that from and to address are checksummed. If not, check here https://ethsum.netlify.app/
 
+```
 {"id": "1","type": "sign_transfer","from_address": "0x00000000000000000000000000000","to_address": "0x000000000000000000000000000000","amount": "10000000"}
+```
+
+## Check The Result
+
+At the terminal where you are running ./vault program, you will get response with field {id, tx}. Pass the hexbyte text to https://ropsten.etherscan.io/pushTx to see transaction details.

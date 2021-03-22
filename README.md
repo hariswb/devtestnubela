@@ -8,15 +8,21 @@ It is written in python and compiled to linux executable with pyinstaller.
 
 Run virtual environment:
 
+```
 source bin/activate
+```
 
 Install dependencies:
 
+```
 pip install -r requirements.txt
+```
 
 To compile executable, head to /src directory,
 then run:
 
+```
 pyinstaller vault.py --onefile
+```
 
-The executable should be there in /dist directory
+The executable should be there in /src/dist directory along with the documentation
